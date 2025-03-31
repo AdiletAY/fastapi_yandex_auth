@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres
+    env_file:
+      - path: .env
+        required: true
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "6432:5432"
